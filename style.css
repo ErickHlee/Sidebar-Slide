@@ -23,6 +23,12 @@
     --tran-04: all 0.4s ease;
     --tran-05: all 0.4s ease;
 }
+
+body {
+    height: 100vh;
+    background: var(--body-color);
+}
+
 /* ==== Reusable ====  */
 
 .sidebar .text {
@@ -39,11 +45,6 @@
 
 /* ==== Sidebar ==== */
 
-body {
-    height: 100vh;
-    background: var(--body-color);
-}
-
 .sidebar {
     position: fixed;
     top: 0;
@@ -52,6 +53,33 @@ body {
     width: 250px;
     padding: 10px 14px;
     background: var(--sidebar-color);
+}
+
+.sidebar li {
+    height: 50px;
+    /* background: red; */
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 20px;
+}
+
+.sidebar li .icon,
+.sidebar li .text {
+    color: var(--text-color);
+    transition: var(--tran-02);
+}
+
+.sidebar header {
+    position: relative;
 }
 
 .sidebar .image-text img {
@@ -82,6 +110,47 @@ body {
 .sidebar header .toggle {
     position: absolute;
     top: 50%;
-    left: -25px;
-    transform: transteY(-50%);
+    right: -25px;
+    transform: translateY(-50%);
+    height: 25px;
+    width: 25px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--sidebar-color);
+    font-size: 22px;
+}
+
+.sidebar .search-box {
+    background: var(--primary-color-light);
+}
+
+.search-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    background: var(--primary-color-light);
+}
+
+.sidebar li a {
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    transition: var(--tran-04);
+}
+
+.sidebar li a:hover {
+    background: var(--primary-color);
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+    color: var(--sidebar-color);
 }
