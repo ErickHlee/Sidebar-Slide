@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
-    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    background: var(--body-color);
+    transition: var(--tran-05);
 }
 
 :root {
@@ -16,6 +20,10 @@
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
+
+    --cor-verde: #729762;
+    --cor-amarela: #E8B86D;
+    --cor-vermelha: #DA7272;
 
     /* === Transições ===  */
     --tran-02: all 0.4s ease;
@@ -45,7 +53,7 @@ body {
     font-size: 16px;
     font-weight: 500;
     color: var(--text-color);
-    transition: var(--tran-04);
+    transition: var(--tran-03);
     white-space: nowrap;
     opacity: 1;
 }
@@ -158,7 +166,6 @@ body {
 }
 
 body.dark .sidebar header .toggle {
-    transform: rotate(180deg);
     color: var(--text-color);
 }
 
@@ -188,6 +195,7 @@ body.dark .sidebar header .toggle {
     width: 100%;
     display: flex;
     align-items: center;
+    text-decoration: none;
     border-radius: 6px;
     transition: var(--tran-04);
 }
@@ -284,14 +292,14 @@ body.dark .menu-bar .mode i.moon {
 /* Animação do switch para direita */
 
 body.dark .switch::before {
-    left: 25px;
+    left: 24px;
 }
 
 .home {
     position: relative;
     height: 100vh;
-    left: 88px;
-    width: calc(100% - 88px);
+    left: 250px;
+    width: calc(100% - 250px);
     background: var(--body-color);
     transition: var(--tran-05);
 }
