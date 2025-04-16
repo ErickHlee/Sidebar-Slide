@@ -246,10 +246,12 @@ body.dark .sidebar li a:hover .text {
 
 body.dark .menu-bar .mode i.sun {
     opacity: 1;
+    transition: var(--tran-01);
 }
 
 body.dark .menu-bar .mode i.moon {
-    opacity: 1;
+    opacity: 0;
+    transition: var(--tran-01);
 }
 
 .menu-bar .mode .toggle-switch {
